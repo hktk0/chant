@@ -45,7 +45,6 @@ document.getElementById('submit').onclick = function() {
     var httpRequest = new XMLHttpRequest();
     httpRequest.open('POST', '../api/sendComments.jsp', true);
     httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
-    httpRequest.send(getData(form));
     httpRequest.onreadystatechange = function() {
         if (httpRequest.readyState == 4 && httpRequest.status == 200) {
             var text = httpRequest.responseText;
